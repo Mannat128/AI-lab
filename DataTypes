@@ -1,0 +1,16 @@
+#int
+a=int(input("enter a no. : "))
+#float
+b=float(input("enter second no. : "))
+#operations
+c=a+b
+print("The sum of a+b : ",c)
+print(a*b)
+
+#string
+name = "Ruhil Industry"
+#operations
+print(name.upper())
+print(name[0])
+print(name + "Training Session")
+
