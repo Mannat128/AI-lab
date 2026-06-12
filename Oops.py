@@ -86,3 +86,68 @@ c = child()
 c.skill1()
 c.skill2()
 '''
+'''
+# Polymorphism
+class dog:
+    def sound (self):
+        print("bark")
+class cat:
+    def sound (self):
+        print("meow")
+class monkey:
+    def sound (self):
+        print("cha cha")
+
+animals = [dog(),cat(),monkey()]
+for animal in animals:
+    animal.sound()
+'''
+'''
+# Abstraction
+from abc import ABC,abstractmethod
+class vehicle(ABC):
+    @abstractmethod
+    def start(self):
+        pass
+class car(vehicle):
+    def start(self):
+        print("car started")
+c = car()
+c.start()
+'''
+'''
+# Super()keyword
+class person:
+    def __init__(self,name):
+        self.name = name
+class student(person):
+    def __init__(self, name,id):
+        super().__init__(name)
+        self.id = id
+s = student("Mannat",101)
+print(s.name)
+print(s.id)
+'''
+'''
+# practical example
+class employee:
+    company = "corptube"
+    def __init__(self,name,salary):
+        self.name = name
+        self.salary = salary
+    def display(self):
+        print(f"name: {self.name}")
+        print(f"salary: {self.salary}")
+
+class developer(employee):
+    def __init__(self, name, salary,tech):
+        super().__init__(name, salary)
+        self.tech = tech
+    def display(self):
+        super().display()
+        print(f"tech: {self.tech}")
+s1 = developer("Mannat",45000,"Prompt Engineer")
+s1.display()
+print(s1.company)
+'''
+
